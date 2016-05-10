@@ -3,18 +3,20 @@ public class SimpleDotCom{
 	public int numberOfHits; // number of hits on the dotcom
 
 
-	String checkYourself(String guess){
+	public String checkYourself(String guess){
 		String result = "miss";
 		int userGuess = Integer.parseInt(guess);
 		for(int location : locationCells){
 			if(userGuess == location){
-				System.out.println("You got a hit at location " + location + "!");
 				numberOfHits++;
 				result = "hit";
-				return result;
 			}
 		}
-		System.out.println("You missed! Enter another guess.");
+		if(numberOfHits == locationCells.length){
+			result = "kill";
+			return result;
+		}	
+
 		return result;
 	}
 	

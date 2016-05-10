@@ -1,14 +1,17 @@
-import java.util.Array;
+import java.util.ArrayList;
 
-public class SimpleDotComGame{
+public class DotComBust{
 	public static void main(String[] args){
 		SimpleDotCom dotcom = new SimpleDotCom();
 		GameHelper helper = new GameHelper();
 		int startingLocation = (int) (Math.random() * 10);
 
-		int[] locCells = {startingLocation,startingLocation + 1,startingLocation + 2};
-		dotcom.setLocation(locCells);
+		ArrayList<Integer> locCells = {startingLocation,startingLocation + 1,startingLocation + 2};
 		
+		//dotcom.setLocation(locCells);
+		dotcom.setLocation(locCells1);
+
+
 		boolean gameActive = true;
 		String usedNumbers = "";
 		String result = "miss";
